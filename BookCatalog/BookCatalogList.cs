@@ -100,6 +100,24 @@ namespace BookCatalog
             }
         }
 
+
+        public void UpdateBook(string isbn, Book bookToUpdate)
+        {
+            //Book bookFound = LookupBook(isbn);
+            ////string newTitle = bookToUpdate.Title;
+            ////bookFound.Title = newTitle;
+            
+            
+            for (int i = 0; i < _books.Count; i++)
+            {
+                if (_books[i].ISBN == isbn)
+                {
+                    _books[i] = bookToUpdate;
+                    return;
+                }
+            }
+
+        }
         #endregion
     }
 }

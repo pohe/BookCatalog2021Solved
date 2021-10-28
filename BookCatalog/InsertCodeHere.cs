@@ -40,14 +40,16 @@ namespace BookCatalog
             }
 
             //Test af DeleteBook
-            Console.WriteLine($"Antal bøger inden delete af bog {bookCatalogList.Count  }");
-            bookCatalogList.DeleteBook("131313");
-            Console.WriteLine($"Antal bøger efter delete af bog {bookCatalogList.Count  }");
+            //Console.WriteLine($"Antal bøger inden delete af bog {bookCatalogList.Count  }");
+            //bookCatalogList.DeleteBook("131313");
+            //Console.WriteLine($"Antal bøger efter delete af bog {bookCatalogList.Count  }");
 
             Console.WriteLine("Print books");
             bookCatalogList.PrintBooks();
-
-
+            Book upDatedBook = new Book("131313", "C# 2.0 programming", "John Sharp v2", 450);
+            bookCatalogList.UpdateBook("131313", upDatedBook);
+            Console.WriteLine("Print books after update");
+            bookCatalogList.PrintBooks();
             // The LAST line of code should be ABOVE this line
         }
     }
