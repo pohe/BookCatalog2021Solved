@@ -92,7 +92,13 @@ namespace BookCatalog
             }
         }
 
-
+        public void PrintBooks()
+        {
+            foreach (Book book in _books)
+            {
+                Console.WriteLine(book);
+            }
+        }
 
         #endregion
     }

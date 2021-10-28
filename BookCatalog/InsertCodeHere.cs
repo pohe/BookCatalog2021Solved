@@ -43,7 +43,10 @@ namespace BookCatalog
             Console.WriteLine($"Antal bøger inden delete af bog {bookCatalogList.Count  }");
             bookCatalogList.DeleteBook("131313");
             Console.WriteLine($"Antal bøger efter delete af bog {bookCatalogList.Count  }");
-            //Console.WriteLine("Hello world!");
+
+            Console.WriteLine("Print books");
+            bookCatalogList.PrintBooks();
+
 
             // The LAST line of code should be ABOVE this line
         }
