@@ -70,7 +70,7 @@ namespace BookCatalog
         public void DeleteBook(string isbn)
         {
             // TODO
-
+            _books.Remove(isbn);
         }
 
         public void PrintBooks()

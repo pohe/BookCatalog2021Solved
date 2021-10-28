@@ -59,11 +59,12 @@ namespace BookCatalog
             bookCatalogDictionary.AddBook(thirdBook);
             bookCatalogDictionary.PrintBooks();
 
-            Console.WriteLine("Books after add");
+            
             Book newBook = new Book("131313", "bla bla bla", "John bla", 45455);
             bookCatalogDictionary.AddBook(newBook);
+            bookCatalogDictionary.DeleteBook("141414");
 
-
+            Console.WriteLine("Books after add(with existing isbn and delete af book with isbn 141414");
             bookCatalogDictionary.PrintBooks();
             // The LAST line of code should be ABOVE this line
         }
