@@ -31,7 +31,10 @@ namespace BookCatalog
         /// </summary>
         public void AddBook(Book aBook)
         {
-
+            if (LookupBook(aBook.ISBN) == null)
+            {
+                _books.Add(aBook.ISBN, aBook);
+            }
             // TODO
         }
 
@@ -43,8 +46,19 @@ namespace BookCatalog
         public Book LookupBook(string isbn)
         {
             // TODO
-
-            return null;
+            //Book foundBook;
+            //if (_books.TryGetValue(isbn, out foundBook))
+            //    return foundBook;
+            //else
+            //    return null;
+            if (_books.ContainsKey(isbn))
+            {
+                return _books[isbn];
+            }
+            else
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -58,6 +72,16 @@ namespace BookCatalog
             // TODO
 
         }
+
+        public void PrintBooks()
+        {
+            foreach (Book book in _books.Values)
+            {
+                Console.WriteLine(book);
+            }
+
+        }
+
         #endregion
     }
 }

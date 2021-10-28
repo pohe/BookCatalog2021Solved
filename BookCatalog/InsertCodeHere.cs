@@ -50,6 +50,21 @@ namespace BookCatalog
             bookCatalogList.UpdateBook("131313", upDatedBook);
             Console.WriteLine("Print books after update");
             bookCatalogList.PrintBooks();
+
+            Console.WriteLine("Test of BookCatalogDictionary");
+
+            BookCatalogDictionary bookCatalogDictionary = new BookCatalogDictionary();
+            bookCatalogDictionary.AddBook(firstBook);
+            bookCatalogDictionary.AddBook(secondBook);
+            bookCatalogDictionary.AddBook(thirdBook);
+            bookCatalogDictionary.PrintBooks();
+
+            Console.WriteLine("Books after add");
+            Book newBook = new Book("131313", "bla bla bla", "John bla", 45455);
+            bookCatalogDictionary.AddBook(newBook);
+
+
+            bookCatalogDictionary.PrintBooks();
             // The LAST line of code should be ABOVE this line
         }
     }
