@@ -6,10 +6,12 @@ namespace BookCatalog
 {
     public class Menu
     {
-
-        public Menu()
+        private BookCatalogList _bookCatalogList;
+        private BookCatalogDictionary _bookCatalogDictionary;
+        public Menu(BookCatalogList bookCatalogList, BookCatalogDictionary bookCatalogDictionary)
         {
-            
+            _bookCatalogList = bookCatalogList;
+            _bookCatalogDictionary = bookCatalogDictionary;
         }
 
         public int ShowMenu()
@@ -76,7 +78,7 @@ namespace BookCatalog
 
             Book b = new Book(isbn, title, author, noOfPages);
 
-
+            _bookCatalogList.AddBook(b);
         }
     }
 }

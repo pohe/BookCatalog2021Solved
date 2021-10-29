@@ -9,11 +9,12 @@ namespace BookCatalog
         public void MyCode()
         {
             // The FIRST line of code should be BELOW this line
-
-            Menu menu = new Menu();
+            BookCatalogList bookCatalogList = new BookCatalogList();
+            BookCatalogDictionary bookCatalogDictionary = new BookCatalogDictionary();
+            Menu menu = new Menu(bookCatalogList, bookCatalogDictionary);
             menu.Run();
 
-            //BookCatalogList bookCatalogList = new BookCatalogList();
+            
 
             //Test af AddBook
             //Book firstBook = new Book("121212", "C# programming", "John Sharp", 597);
